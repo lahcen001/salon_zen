@@ -32,6 +32,20 @@
     border-top: 1px solid  rgb(240, 144, 18);
  }
 
+ input[type=text], select {
+    
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.logo_noire{
+    width: 120px;
+    height:120px;
+}
+.text_bold{
+    font-weight: bold;
+    color:black;
+}
+/* 
   *{
       border:1px solid red;
-  }
+  } */
