@@ -25,7 +25,7 @@
   border-radius: 0px;
 
   }
-  .contact{
+  .contact1{
       margin-bottom: 70px;
   }
  .border1 {
@@ -49,6 +49,21 @@
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
     color:white
+}
+.contact{
+    margin-bottom: 20px;
+     font-size: 40px;
+  
+}
+.title1{
+    margin-bottom: 20px;
+     font-size: 20px;
+  
+}
+.title2{
+    margin-bottom: 20px;
+     font-size: 27px;
+  
 }
 /* 
   *{
