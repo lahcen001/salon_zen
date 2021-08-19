@@ -11,6 +11,19 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
+ .Ellipse_2 {
+  border-width: 26.52px;
+  border-color: rgb(0, 0, 0);
+  border-style: solid;
+  border-radius: 50%;
+  position: absolute;
+  left: 268px;
+  top: 565px;
+  width: 1601.96px;
+  height: 1053.96px;
+  z-index: 3;
+}
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap");
 :root {
   --bs-blue: #007bff;

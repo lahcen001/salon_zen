@@ -2,11 +2,13 @@
 <html lang="en">
 
 <head>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
 
     <link rel="stylesheet" href="lux.css">
     <link rel="stylesheet" href="style.css">
-
+    <script src="https://use.fontawesome.com/7659e695e8.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -24,8 +26,28 @@
 
 
 <body>
+    <script>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary d-flex justify-content-center     ">
+        Number.prototype.format = function (n) {
+            var r = new RegExp('\\d(?=(\\d{3})+' + (n > 0 ? '\\.' : '$') + ')', 'g');
+            return this.toFixed(Math.max(0, Math.floor(n))).replace(r, '$&,');
+        };
+
+        $('.count').each(function () {
+            $(this).prop('counter', 0).animate({
+                counter: $(this).text()
+            }, {
+                duration: 10000,
+                easing: 'easeOutExpo',
+                step: function (step) {
+                    $(this).text('' + step.format());
+                }
+            });
+        });
+
+    </script>
+
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary d-flex justify-content-center     ">
         <a class="navbar-brand" href="#">
             <img src="./img/logo.png" alt="" class="logo">
         </a>
@@ -59,15 +81,58 @@
 
 
                 </ul>
-                <!-- <form class="d-flex">
+         <form class="d-flex">
                 <input class="form-control me-sm-2" type="text" placeholder="Search">
                 <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
             </form> -->
+    <!-- </div>
+        </div>
+    </nav> -->
+
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary   ">
+
+        <div class="container-fluid ">
+            <a class="navbar-brand " href="#">
+                <img src="./img/logo.png" alt="" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+                aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse " id="navbarColor01">
+                <ul class="navbar-nav me-auto mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Acceil
+                            <span class="visually-hidden">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Offres</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Galerie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Equipe</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+
+                </ul>
+                <form class="d-flex globe">
+                    <span class="fr">FR </span> <i class="fa fa-globe " aria-hidden="true"></i>
+                </form>
             </div>
         </div>
     </nav>
-
-
 
 
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -97,85 +162,8 @@
 
     </div>
 
-    <!-- <div class="container"> -->
-    <!-- <div class="row">
 
-            <div class="col-md-6">
-
-
-                <form>
-
-                    <h4>Se Connecter</h4>
-                    <fieldset>
-
-                        <div class="form-group ">
-
-                            <input type="email" class="form-control  my-3" id="exampleInputEmail1"
-                                aria-describedby="emailHelp" placeholder="Enter email">
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp" placeholder="Mot de passe">
-
-                        </div>
-                        <div class="row">
-
-                            <div class="col-md-6">
-
-                            </div>
-                            <div class="col-md-6  d-flex justify-content-end pt-3">
-                                <button type="button" class="btn btn-outline-dark">connexion</button>
-
-                            </div>
-                        </div>
-
-                    </fieldset>
-                </form>
-            </div>
-
-
-
-            <div class="col-md-6">
-
-
-
-                <form>
-
-                    <h4>S'inscrire</h4>
-                    <fieldset>
-
-                        <div class="form-group ">
-
-                            <input type="email" class="form-control  my-3" id="exampleInputEmail1"
-                                aria-describedby="emailHelp" placeholder="Nom / Prénom">
-                            <input type="email" class="form-control  my-3" id="exampleInputEmail1"
-                                aria-describedby="emailHelp" placeholder="Email">
-                            <input type="email" class="form-control  my-3" id="exampleInputEmail1"
-                                aria-describedby="emailHelp" placeholder="Mot de passe">
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp" placeholder="Confirmez le mot de passe">
-
-                        </div>
-                        <div class="row">
-
-                            <div class="col-md-6">
-
-                            </div>
-                            <div class="col-md-6  d-flex justify-content-end pt-3">
-                                <button type="button" class="btn btn-outline-dark"> S’INSCRIRE</button>
-
-                            </div>
-                        </div>
-
-                    </fieldset>
-                </form>
-            </div>
-        </div> -->
-
-
-
-    <!-- </div> -->
-
-    <!--  -->
-    <div class="container">
+    <div class="container bg2">
 
         <div class="col-md-12 d-flex justify-content-center ">
 
@@ -202,15 +190,15 @@
         <div class="row">
 
             <div class="col-md-4 d-flex justify-content-center ">
-                <h1 class="textstrock">550K</h1>
+                <h1 class="textstrock count">550</h1>
 
             </div>
             <div class="col-md-4  d-flex justify-content-center ">
-                <h1 class="textstrock">250K</h1>
+                <h1 class="textstrock count">250</h1>
 
             </div>
             <div class="col-md-4  d-flex justify-content-center">
-                <h1 class="textstrock">129K</h1>
+                <h1 class="textstrock count">129</h1>
 
             </div>
 
@@ -246,7 +234,104 @@
 
 
 
+
+
+
+    <!-- yassin lg -->
+
+
+
+    <div class="  text-right text-light  p-3 border1" style="background-color: rgb(0, 0, 0);">
+        <div class="col-md-12 d-flex justify-content-center  my-5">
+
+            <img src="./img/card3/yassin.png" class="card3" alt="">
+
+
+        </div>
+
+
+        <div class="col-md-8 d-flex justify-content-center mx-auto my-3 text-center   ">
+
+            <h1 class="title3">Yassin lg</h1>
+        </div>
+        <div class="col-md-8 d-flex justify-content-center mx-auto my-3 text-center   ">
+            <h3 class="title4">Un artiste passionné au sommet de son art ! </h3>
+        </div>
+
+        <div class="col-md-8 d-flex justify-content-center mx-auto my-3 text-center  ">
+            <p>
+
+
+                À la tête d’une équipe hautement qualifiée, Yassine IG, coiffeur professionnel, sublime les chevelures
+                en maniant les pigments comme un virtuose. Son savoir-faire et sa technique toujours plus innovante et
+                perfectionnée, ont fait de lui un AS de la coiffure. <br />
+                Résultat, de nombreuses personnalités font
+                appel à
+                lui pour obtenir LA coloration idéale. Du simple balayage au blond platine, Yassine vous propose des
+                prestations sur mesure et adaptées à vos besoins car chacune d'entre vous est unique.
+
+
+            </p>
+        </div>
+    </div>
+
+
+    <!-- yassin lg -->
+
+
+    <div class="my-4">
+
+
+
+
+
+
+    </div>
+
+
     <div class="container">
+
+
+    </div>
+    <div class="container bg1">
+        <div class="row  ">
+            <div class="col-md-4">
+                <img src="./img/gallerie/1.png" class="img-fluid1">
+            </div>
+            <div class="col-md-4">
+                <img src="./img/gallerie/2.png" class="img-fluid2">
+            </div>
+            <div class="col-md-4">
+                <img src="./img/gallerie/5.png" class="img-fluid3">
+                <img src="./img/gallerie/4.png" class="img-fluid4">
+            </div>
+            <div class="col-md-8">
+                <img src="./img/gallerie/6.png" class="img-fluid6">
+            </div>
+            <div class="col-md-4">
+                <img src="./img/gallerie/3.png" class="img-fluid6">
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+    </div>
+
+    </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="container bg1">
 
         <div class="row">
             <div class="col-md-8">
@@ -322,11 +407,6 @@
                 </div>
             </div>
         </div>
-
-
-
-
-
         <div class="row">
             <div class="col-md-4 d-flex justify-content-center mx-auto">
 
@@ -340,7 +420,7 @@
                 <h5 class="text-center title2">Let your hair shine with special offers and </br>deals ! Subscribe !</h5>
             </div>
         </div>
-        <div class="row">
+        <div class="row ">
             <div class="col-md-8 d-flex justify-content-center mx-auto mb-3">
 
                 <div class="input-group mb-3">
@@ -352,80 +432,14 @@
                 </div>
             </div>
         </div>
-    </div>
-
-
-    <!-- yassin lg -->
-
-
-
-    <div class="  text-right text-light  p-3 border1" style="background-color: rgb(0, 0, 0);">
-        <div class="col-md-12 d-flex justify-content-center  my-5">
-
-            <img src="./img/card3/yassin.png" class="card3" alt="">
-
-
-        </div>
-
-
-        <div class="col-md-8 d-flex justify-content-center mx-auto my-3 text-center   ">
-
-            <h1 class="title3">Yassin lg</h1>
-        </div>
-        <div class="col-md-8 d-flex justify-content-center mx-auto my-3 text-center   ">
-            <h3 class="title4">Un artiste passionné au sommet de son art ! </h3>
-        </div>
-
-        <div class="col-md-8 d-flex justify-content-center mx-auto my-3 text-center  ">
-            <p>
-
-
-                À la tête d’une équipe hautement qualifiée, Yassine IG, coiffeur professionnel, sublime les chevelures
-                en maniant les pigments comme un virtuose. Son savoir-faire et sa technique toujours plus innovante et
-                perfectionnée, ont fait de lui un AS de la coiffure. <br />
-                Résultat, de nombreuses personnalités font
-                appel à
-                lui pour obtenir LA coloration idéale. Du simple balayage au blond platine, Yassine vous propose des
-                prestations sur mesure et adaptées à vos besoins car chacune d'entre vous est unique.
-
-
-            </p>
-        </div>
-    </div>
-
-
-    <!-- yassin lg -->
-
-
-    <div class="my-4">
-
-
-
 
 
     </div>
 
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 d-flex justify-content-center mx-auto mb-3">
 
-                <h5 class="text-center title2">Let your hair shine with special offers and </br>deals ! Subscribe !</h5>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-8 d-flex justify-content-center mx-auto mb-3">
 
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Email" aria-label="Email"
-                        aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                        <button class="btn btn-primary" type="button">SIGN UP</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
 
 
