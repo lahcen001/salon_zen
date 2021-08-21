@@ -163,7 +163,23 @@ p,h1,h2,h3,h4,h5,h6{
         padding-bottom: 6px;
     }
 
+   /*  offre page */
 
-
-
-
+    thead, tbody, tfoot, tr, td, th {
+        border-color: none !important;
+        border-style: none !important;
+        border-width: 0 !important;
+    }
+    .table th, .table td {
+        padding: 0.5rem !important;
+    }
+    .td1{
+        text-align: left;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+    }
+    .td3{
+        text-align: right;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+    }
