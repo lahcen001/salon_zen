@@ -1,4 +1,6 @@
-
+html{
+    scroll-behavior: smooth;
+}
 @font-face {
     font-family: 'Luxia';
     src: url('font/luxia/Luxia-Display.otf')
@@ -188,3 +190,20 @@ p,h1,h2,h3,h4,h5,h6{
     .title_gallerie{
         font-size: 40px;
     }
+
+    .gotoup{
+        position: fixed;
+        width: 70px;
+        height: 70px;
+    
+        bottom: 40px;
+        right:50px; 
+
+        text-decoration: none;
+        text-align: center;
+        line-height: 50px;
+        color:white;
+        font-size:22px;
+
+    }
+  
