@@ -1,9 +1,13 @@
 html{
     scroll-behavior: smooth;
 }
-@font-face {
+/* @font-face {
     font-family: 'Luxia';
-    src: url('font/luxia/Luxia-Display.otf')
+    src: url('font/luxia/Luxia-Regular.otf')
+  } */
+  @font-face {
+    font-family: 'Luxia';
+    src: url('font/luxia/NunitoSans-ExtraLight.ttf')
   }
 .logo {
     width: 50px;
