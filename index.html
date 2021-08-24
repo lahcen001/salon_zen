@@ -3,114 +3,137 @@
 
 <head>
 
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="lux.css">
     <link rel="stylesheet" href="style.css">
-    <script src="https://use.fontawesome.com/7659e695e8.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        .card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            position: absolute;
+            content: '';
+            width: 80%;
+            background: rgba(235, 53, 131, 0.7);
+            top: -50%;
+            left: -100%;
+            z-index: 1;
+            transform: rotate(25deg);
+            transform-origin: center top 0;
+            transition: .5s
+        }
+
+        .card:hover:before {
+            left: 10%;
+
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .text-card {
+            width: 100%;
+            padding: 0 20px;
+            position: absolute;
+            top: -100%;
+            color: rgb(255, 255, 255);
+            left: 0;
+            z-index: 2;
+            transition: 1.1s;
+        }
+
+        .card-text h3 {
+            font-family: poppins;
+
+        }
+
+        .card:hover .card-text {
+            top: 80px
+        }
+    </style>
 </head>
 
 
 
 <body>
-    <script>
 
-        Number.prototype.format = function (n) {
-            var r = new RegExp('\\d(?=(\\d{3})+' + (n > 0 ? '\\.' : '$') + ')', 'g');
-            return this.toFixed(Math.max(0, Math.floor(n))).replace(r, '$&,');
-        };
-
-        $('.count').each(function () {
-            $(this).prop('counter', 0).animate({
-                counter: $(this).text()
-            }, {
-                duration: 10000,
-                easing: 'easeOutExpo',
-                step: function (step) {
-                    $(this).text('' + step.format());
-                }
-            });
-        });
-
-
-        $(document).ready(function () {
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 50) {
-                    $('#back-to-top').fadeIn();
-                } else {
-                    $('#back-to-top').fadeOut();
-                }
-            });
-            // scroll body to 0px on click
-            $('#back-to-top').click(function () {
-                $('body,html').animate({
-                    scrollTop: 0
-                }, 400);
-                return false;
-            });
-        });
-    </script>
-
-
-
-
-
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary   ">
-
-        <div class="container-fluid ">
-            <a class="navbar-brand " href="#">
-                <img src="./img/logo.png" alt="" class="logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
-                aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse " id="navbarColor01">
-                <ul class="navbar-nav me-auto mx-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/">Acceil
-                            <span class="visually-hidden">(current)</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="offre.html">Offres</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="gallerie.html">Galerie</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Equipe</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="a_propos.html">A propos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-
-                </ul>
-                <form class="d-flex globe">
-                    <span class="fr">FR </span> <i class="fa fa-globe " aria-hidden="true"></i>
-                </form>
+    <div class="hidden modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <button type="button" class="btn btn-primary">FR</button>
+                    <button type="button" class="btn btn-primary">EN</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
             </div>
         </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
+        <a class="navbar-brand " href="#">
+            <img src="./img/logo.png" alt="" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/">Acceil
+                        <span class="visually-hidden">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="offre.html">Offres</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gallerie.html">Galerie</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Equipe</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="a_propos.html">A propos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+
+            </ul>
+
+            <form class="d-flex globe">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    <span class="fr">FR </span> <i class="fa fa-globe " aria-hidden="true"></i>
+                </button>
+            </form>
+
+        </div>
     </nav>
+
+
 
 
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -323,8 +346,11 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="card shadow p-3 mb-5 bg-white rounded">
+
+
                     <img class="card-img-top" src="./img/card2/img4.png" alt="Card image cap">
                     <div class="card-body">
+                        <h5 class="card-text">Soins cheveux </h5>
 
 
                     </div>
@@ -332,6 +358,8 @@
             </div>
             <div class="col-md-4">
                 <div class="card shadow p-3 mb-5 bg-white rounded">
+
+
                     <img class="card-img-top" src="./img/card2/img5.png" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-text">Soins cheveux </h5>
@@ -369,6 +397,10 @@
                         <p class="card-text"><span class="text_bold">Adresse :</span>Rue Oued Tansift, Immeuble 66,
                             Rabat Hay Riad,</p>
                         <p class="card-text"><span class="text_bold">Téléphone :</span>+212 5 3768 6271</p>
+
+                        <div class="text-card">
+                            Lorem ipsum dolor sit
+                        </div>
 
                     </div>
                 </div>
@@ -497,31 +529,27 @@
         </div>
         <!-- Copyright -->
     </footer>
-    <script>
-        //Get the button
-        var mybutton = document.getElementById("myBtn");
 
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function () { scrollFunction() };
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = "block";
-            } else {
-                mybutton.style.display = "none";
-            }
-        }
-
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
-    </script>
 
     <a href="#">
         <i class="fa fa-arrow-up gotoup"></i>
     </a>
+
+    <script type="text/javascript" src="script.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script>$('.modal-backdrop').remove();</script>
+
+
 
 </body>
 
