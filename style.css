@@ -306,11 +306,9 @@ button {
     flex: 66.66%;
     max-width: 66.66%;
     padding: 0 4px;
- 
-  }
-  .img1{
     width: 100%;
   }
+  
   
   .column img {
     margin-top: 8px;
