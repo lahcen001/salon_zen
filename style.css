@@ -299,7 +299,9 @@ button {
   /* Create four equal columns that sits next to each other */
   .column {
    display: grid;
- grid-gap:4gpx;
+ grid-gap:8px;
+margin-bottom: 100px;
+ justify-self: center;
   }
   .img1{
     max-width: 100%;
@@ -338,3 +340,4 @@ button {
     grid-column: 3/4;
     grid-row: 3/4;
   }
+  
