@@ -298,36 +298,31 @@ button {
   
   /* Create four equal columns that sits next to each other */
   .column {
-    flex: 33.33%;
-    max-width: 33.33%;
-    padding: 0 4px;
+   display: grid;
+   grid-template-areas:" item1 item2 item4   " 
+                       " item3 item3 item5  " 
+                       " item3 item3 item6   "
+   ;
+  }
+  .img1{
+    max-width: 100%;
   }
   .column1 {
-    flex: 66.66%;
-    max-width: 66.66%;
-    padding: 0 4px;
-    width: 100%;
+    display: grid;
+    
+   }
+   .img1{
+     max-width: 100%;
+   }
+   .item1{
+     grid-area: item1;
+   }
+   .item2{
+    grid-area: item2;
   }
-  
-  
-  .column img {
-    margin-top: 8px;
-    vertical-align: middle;
-    width: 100%;
+  .item4{
+    grid-area: item4;
   }
-  
-  /* Responsive layout - makes a two column-layout instead of four columns */
-  @media screen and (max-width: 800px) {
-    .column {
-      flex: 50%;
-      max-width: 50%;
-    }
-  }
-  
-  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-    .column {
-      flex: 100%;
-      max-width: 100%;
-    }
+  .item3{
+    grid-area: item3;
   }
