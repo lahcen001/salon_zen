@@ -302,7 +302,7 @@ button {
   .column {
    display: grid;
  grid-gap:8px;
-margin-bottom: 100px;
+margin-bottom: 50px;
  justify-self: center;
   }
   .img1{
@@ -314,6 +314,7 @@ margin-bottom: 100px;
    }
    .img1{
      max-width: 100%;
+     box-shadow: 10px 10px 5px rgb(241, 241, 241);
    }
    .item1{
      grid-column: 1/2;
@@ -350,7 +351,7 @@ margin-bottom: 100px;
     .column {
       display: grid;
     grid-gap:8px;
-   margin-bottom: 100px;
+   margin-bottom: 50px;
     justify-self: center;
      }
      .img1{
