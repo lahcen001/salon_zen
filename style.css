@@ -490,3 +490,23 @@ margin-bottom: 50px;
     }
    
   }
+
+  .soyez_unique{
+    font-family: Luxia1;
+    font-size: 2rem;
+    padding-left: 5rem;
+
+  }
+  .our_story{
+  
+    font-family: Luxia1;
+    font-size: 3.8rem;
+    padding-left: 5rem;
+
+
+  }
+  .our_story >h1{
+    color:'#B0B0B0' !important ;
+   
+  }
+
