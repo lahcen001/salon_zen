@@ -456,48 +456,37 @@ margin-bottom: 50px;
   }
 
   @media only screen and (max-width: 600px) {
-
     .container1 {
-    
-      text-align: center;
-      color: white;
-      margin-right: auto;
-      margin-left:auto;
+      position: relative;
+      
     }
     
     
     .centered {
-    
-  
-      
-      color:black;
-      font-family: Luxia;
-      font-size: 1.2rem;
-  
+      position: relative;
+      padding: 16px;
       
     }
     .centered2 {
-
-  
-      transform: translate(-50%, -50%);
-      color:black;
-      font-family: Luxia;
-      font-size: 1.2rem;
-  
+      position: relative;
+     
+      left: 0%;
+   
       
     }
     .text_bold{
       font-weight: bold;
     }
   
-    
-    .app_{
-   
-     
-    right: 0; 
-    margin-left: auto; 
-    margin-right: auto; 
-     
-      
+    .background1{
+      position: relative;
     }
+    .app_{
+      position: relative;
+      margin-top: 1rem;
+    padding-left: 1rem;
+    margin-bottom: 2rem;
+     
+    }
+   
   }
