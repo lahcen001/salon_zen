@@ -410,6 +410,8 @@ margin-bottom: 50px;
     position: relative;
     text-align: center;
     color: white;
+    margin-right: auto;
+    margin-left:auto;
   }
   
   
@@ -421,5 +423,81 @@ margin-bottom: 50px;
     color:black;
     font-family: Luxia;
     font-size: 1.2rem;
+
     
+  }
+  .centered2 {
+    position: absolute;
+    top: 72%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:black;
+    font-family: Luxia;
+    font-size: 1.2rem;
+
+    
+  }
+  .text_bold{
+    font-weight: bold;
+  }
+
+  .background1{
+    position: relative;
+  }
+  .app_{
+    position: absolute;
+    top:75%;
+    left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+   
+    
+  }
+
+  @media only screen and (max-width: 600px) {
+
+    .container1 {
+    
+      text-align: center;
+      color: white;
+      margin-right: auto;
+      margin-left:auto;
+    }
+    
+    
+    .centered {
+    
+  
+      
+      color:black;
+      font-family: Luxia;
+      font-size: 1.2rem;
+  
+      
+    }
+    .centered2 {
+
+  
+      transform: translate(-50%, -50%);
+      color:black;
+      font-family: Luxia;
+      font-size: 1.2rem;
+  
+      
+    }
+    .text_bold{
+      font-weight: bold;
+    }
+  
+    
+    .app_{
+   
+     
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+     
+      
+    }
   }
