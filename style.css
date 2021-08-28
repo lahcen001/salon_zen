@@ -404,3 +404,22 @@ margin-bottom: 50px;
     margin-right: 8%;
 
   }
+
+
+  .container1 {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  
+  
+  .centered {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:black;
+    font-family: Luxia;
+    font-size: 1.2rem;
+    
+  }
