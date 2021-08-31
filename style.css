@@ -426,6 +426,12 @@ margin-bottom: 50px;
 
     
   }
+
+
+
+
+
+
   .centered2 {
     position: absolute;
     top: 72%;
@@ -441,6 +447,8 @@ margin-bottom: 50px;
     font-weight: bold;
   }
 
+
+  
   .background1{
     position: relative;
   }
@@ -455,6 +463,57 @@ margin-bottom: 50px;
     
   }
 
+
+  /*  */
+
+
+
+  .centered_left {
+    position: absolute;
+    top: 60%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    color:black;
+    font-family: Luxia;
+    font-size: 1.2rem;
+
+    
+  }
+
+  
+  .centered2_left {
+    position: absolute;
+    top: 39%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    color:black;
+    font-family: Luxia1;
+    font-size: 2.3rem;
+
+    
+  }
+  .centered3_left {
+    position: absolute;
+    top: 80%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    color:black;
+    font-family: Luxia;
+    font-size: 1.4rem;
+
+    
+  }
+  .centered4_left {
+    position: absolute;
+    top: 87%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    color:black;
+    font-family: Luxia;
+    font-size: 1rem;
+
+    
+  }
   @media only screen and (max-width: 600px) {
     .container1 {
       position: relative;
@@ -474,6 +533,7 @@ margin-bottom: 50px;
    
       
     }
+    
     .text_bold{
       font-weight: bold;
     }
@@ -488,6 +548,64 @@ margin-bottom: 50px;
     margin-bottom: 2rem;
      
     }
+
+  
+
+
+    /* sdds */
+
+
+
+  .centered_left {
+    position: relative;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -15%);
+    color:black;
+    font-family: Luxia;
+    font-size: 1.2rem;
+    padding: 2rem;
+
+    
+  }
+
+  
+  .centered2_left {
+    position: relative;
+    top: 39%;
+    left: 50%;
+    transform: translate(-50%, -15%);
+    color:black;
+    font-family: Luxia1;
+    font-size: 2.3rem;
+    padding: 2rem;
+
+    
+  }
+  .centered3_left {
+    position: relative;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -15%);
+    color:black;
+    font-family: Luxia;
+    font-size: 1.4rem;
+
+    
+  }
+  .centered4_left {
+    position: relative;
+    top: 87%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:black;
+    font-family: Luxia;
+    font-size: 1rem;
+
+    
+  }
+
+
    
   }
 
