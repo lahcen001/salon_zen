@@ -475,7 +475,7 @@ margin-bottom: 50px;
     transform: translate(-50%, -50%);
     color:black;
     font-family: Luxia;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
 
     
   }
@@ -514,7 +514,7 @@ margin-bottom: 50px;
 
     
   }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 770px) {
     .container1 {
       position: relative;
       
@@ -564,7 +564,7 @@ margin-bottom: 50px;
     color:black;
     font-family: Luxia;
     font-size: 1.2rem;
-    padding: 2rem;
+    font-size: 0.9rem;
 
     
   }
