@@ -82,15 +82,23 @@ html{
      font-size: 27px;
   
 }
-/* 
-  *{
-      border:1px solid red;
-  } */
 
-  .card3{
+
+.card3{
     width: 40%;
     
 }
+
+
+@media only screen and (max-width: 600px) {
+  .card3{
+    width: 80%;
+  }
+    .navbar-nav {
+      padding-left: 10px;
+    }
+}
+  
 .title3{
     text-align: center;
     font-size: 70px;
