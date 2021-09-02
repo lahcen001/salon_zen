@@ -5,8 +5,21 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="lux.css">
-    <link rel="stylesheet" href="./../style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/magnific-popup.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/jquery.magnific-popup.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#headerVideoLink').magnificPopup({
+                type: 'inline',
+                midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+            });
+        });
 
+    </script>
     <script src="https://use.fontawesome.com/7659e695e8.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salon Zen</title>
@@ -100,7 +113,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link active Luxia_1" href="/">Acceil
+                    <a class="nav-link active Luxia_1" href="https://webvok.net/demo/salonzen/">Acceil
                         <span class="visually-hidden">(current)</span>
                     </a>
                 </li>
@@ -128,7 +141,7 @@
                         FR
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">EN</a>
+                        <a class="dropdown-item" href="./en/index.html">EN</a>
                         <a class="dropdown-item" href="#">AR</a>
 
                     </div>
@@ -144,25 +157,28 @@
 
 
 
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <!-- <div class="carousel-item active">
-                <img src="./img/Carousel/car1.png" class="d-block w-100" alt="...">
-            </div> -->
-            <div class="carousel-item active">
-                <img src="./img/Carousel/car2.png" class="d-block w-100" alt="...">
-            </div>
 
+
+
+    <div class="container1">
+        <div class="background1">
+            <img src="./img/Carousel/car2.png" alt="Snow" style="width:100%;">
+
+
+            <a class="centered2 car2" href="https://play.google.com/store/apps/details?id=ma.salonzen.beautyRDV&gl=MA">
+                <span class="text_bold">Télecharger
+                    l'application</span></a>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+        <div class="app_ car2">
+            <a href=""> <img src="./img/appStore.png" class="appStore" alt=""></a>
 
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
-
-        </a>
+            <a href="https://play.google.com/store/apps/details?id=ma.salonzen.beautyRDV&gl=MA"> <img
+                    src="./img/googlePlay.png" class="googlePlay" alt=""></a>
+        </div>
     </div>
+
+
+
     <div class="my-5">
 
 
@@ -198,31 +214,41 @@
 
         <div class="row">
 
-            <div class="col-md-4 d-flex justify-content-center ">
-                <h1 class="textstrock count">550</h1>
+            <div class="col-md-4 d-flex  justify-content-center ">
+                <div class="row">
+                    <div class="col-md-12 d-flex justify-content-center">
+                        <h1 class="textstrock count text-center">550 K</h1>
+                    </div>
+                    <div class="ol-md-12 d-flex justify-content-center">
+                        <h6 class="font-weight-bold textstrock text-center">PRESTATION</h6>
+                    </div>
+                </div>
 
             </div>
             <div class="col-md-4  d-flex justify-content-center ">
-                <h1 class="textstrock count">250</h1>
+                <div class="row">
+                    <div class="ol-md-12  d-flex justify-content-center">
+                        <h1 class="textstrock count text-center">250 K</h1>
+                    </div>
+                    <div class="ol-md-12 d-flex justify-content-center">
+                        <h6 class="font-weight-bold textstrock text-center">CLIENTES</h6>
+                    </div>
+                </div>
 
             </div>
             <div class="col-md-4  d-flex justify-content-center">
-                <h1 class="textstrock count">129</h1>
+                <div class="row">
+                    <div class="ol-md-12  d-flex justify-content-center">
+                        <h1 class="textstrock count text-center">129 K</h1>
+                    </div>
+                    <div class="ol-md-12 d-flex justify-content-center">
+                        <h6 class="font-weight-bold textstrock text-center">FOLLOWERS</h6>
+                    </div>
+                </div>
 
             </div>
 
-            <div class="col-md-4 d-flex justify-content-center ">
-                <h6 class="font-weight-bold textstrock">PRESTATION</h6>
 
-            </div>
-            <div class="col-md-4  d-flex justify-content-center ">
-                <h6 class="font-weight-bold textstrock">CLIENTES</h6>
-
-            </div>
-            <div class="col-md-4  d-flex justify-content-center">
-                <h6 class="font-weight-bold textstrock">FOLLOWERS</h6>
-
-            </div>
 
 
         </div>
@@ -241,60 +267,79 @@
     </div>
 
 
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <!-- <div class="carousel-item active">
-                <img src="./img/Carousel/car1.png" class="d-block w-100" alt="...">
-            </div> -->
-            <div class="carousel-item active">
-                <img src="./img/Carousel/car1.png" class="d-block w-100" alt="...">
-            </div>
+
+
+
+    <div class="container1">
+        <div class="background1">
+            <a href="#headerPopup" id="headerVideoLink" target="_blank"> <img src="./img/Carousel/car1.png" alt="Snow"
+                    style="width:100%;"></a>
+
 
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
 
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
-
-        </a>
     </div>
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <!-- <div class="carousel-item active">
-                <img src="./img/Carousel/car1.png" class="d-block w-100" alt="...">
-            </div> -->
-            <div class="carousel-item active">
-                <img src="./img/Carousel/car3.png" class="d-block w-100" alt="...">
+
+
+
+
+    <div class="container1">
+        <div class="background1">
+            <img src="./img/Carousel/car3_.png" alt="Snow" style="width:100%;">
+            <h1 class="centered2_left">
+                <span class="text_bold">Soyez Unique</span></h1>
+
+
+            <div class="centered_left_left">
+                <div class="centered_left">L'art de la coiffure n'a aucun secret pour nous. de la coloration à
+                    la<br />
+
+                    coupe de cheveux, nos coiffeurs stylistes vous garantissent un<br />
+                    résultat sublime en harmonie avec la morphologie de votre visage.<br />
+
+                    Un diagnostic capillaire vous est <br />offert pour réaliser la coiffure de vos réves</div>
+
             </div>
 
+
+            <h1 class="centered3_left">
+                <span class="text_bold">COIFFURE</span></h1>
+            <h1 class="centered4_left">
+                <a href="https://play.google.com/store/apps/details?id=ma.salonzen.beautyRDV&gl=MA"><span
+                        class="text_bold">LIRE LA SUITE ...</span></h1></a>
+
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
-
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
 
 
-        </a>
     </div>
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
 
-            <div class="carousel-item active">
-                <img src="./img/Carousel/car4.png" class="d-block w-100" alt="...">
-            </div>
 
+
+
+
+
+
+
+
+    <div class="container1">
+        <div class="background1">
+            <img src="./img/Carousel/car4_.png" alt="Snow" style="width:100%;">
+
+            <div class="centered">Grace à cette <span class="text_bold"> Application </span> , Salon Zen réinventera
+                l'experience de
+                réservation beauté
+                afin
+                de répondre au mieux à vos attentes et ainsi évoluer dans l'ére du temps</div>
+            <a class="centered2" href="https://play.google.com/store/apps/details?id=ma.salonzen.beautyRDV&gl=MA">
+                <span class="text_bold">Télecharger
+                    l'application</span></a>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+        <div class="app_">
+            <a href=""> <img src="./img/appStore.png" class="appStore" alt=""></a>
 
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
-
-        </a>
+            <a href="https://play.google.com/store/apps/details?id=ma.salonzen.beautyRDV&gl=MA"> <img
+                    src="./img/googlePlay.png" class="googlePlay" alt=""></a>
+        </div>
     </div>
 
 
@@ -303,22 +348,50 @@
         <div class="row">
             <div class="column">
                 <div class="item1">
-                    <img class="img1  " src="./img/gallerie/1.png">
+                    <img class="img1  image__img" src="./img/gallerie/1.png">
+
+                    <div class="image__overlay">
+                        <div class="image__title">Soyez Unique</div>
+                        <h1 class="image__description">OMBRÉ</h1>
+                    </div>
+
                 </div>
+
                 <div class="item2">
-                    <img class="img1 " src="./img/gallerie/2.png">
+                    <img class="img1  image__img" src="./img/gallerie/2.png">
+
+                    <div class="image__overlay">
+                        <div class="image__title">Soyez Unique</div>
+                        <h1 class="image__description">OMBRÉ</h1>
+                    </div>
                 </div>
                 <div class="item4">
-                    <img class="img1 " src="./img/gallerie/4.png">
+                    <img class="img1  img1_item4" src="./img/gallerie/4.png">
+                    <div class="image__overlay">
+                        <div class="image__title">Soyez Unique</div>
+                        <h1 class="image__description">OMBRÉ</h1>
+                    </div>
                 </div>
                 <div class="item3">
-                    <img class="img1 " src="./img/gallerie/3.png">
+                    <img class="img1  img1_item3" src="./img/gallerie/3.png">
+                    <div class="image__overlay">
+                        <div class="image__title">Soyez Unique</div>
+                        <h1 class="image__description">OMBRÉ</h1>
+                    </div>
                 </div>
                 <div class="item5">
-                    <img class="img1 " src="./img/gallerie/5.png">
+                    <img class="img1  img1_item5" src="./img/gallerie/5.png">
+                    <div class="image__overlay">
+                        <div class="image__title">Soyez Unique</div>
+                        <h1 class="image__description">OMBRÉ</h1>
+                    </div>
                 </div>
                 <div class="item6">
-                    <img class="img1 " src="./img/gallerie/6.png">
+                    <img class="img1   img1_item6" src="./img/gallerie/6.png">
+                    <div class="image__overlay">
+                        <div class="image__title">Soyez Unique</div>
+                        <h1 class="image__description">OMBRÉ</h1>
+                    </div>
                 </div>
 
             </div>
@@ -340,7 +413,8 @@
 
 
 
-    <div class="  text-right text-light  p-3 border1" style="background-color: rgb(0, 0, 0);">
+    <div class="  text-right text-light  p-3 border1"
+        style=" background-image: url('./img/backgound/yassin_background.png');">
         <div class="col-md-12 d-flex justify-content-center  my-5">
 
             <img src="./img/card3/yassin.png" class="card3" alt="">
@@ -412,9 +486,8 @@
         <div class="row">
             <div class="col-md-8">
                 <h1 class="contact Luxia_2"> Contact info</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip commodo.</p>
+                <p>Accordez-vous une parenthése hors du temps, un moment unique de détente au coeur d'un écrin de
+                    douceur et de volupté sans pareil </p>
             </div>
         </div>
 
@@ -587,20 +660,24 @@
 
     <script type="text/javascript" src="script.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-
-    <script>$('.modal-backdrop').remove();</script>
 
 
 
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+
+                <div id="headerPopup" class="mfp-hide embed-responsive embed-responsive-21by9">
+                    <iframe class="embed-responsive-item" width="854" height="480"
+                        src="https://www.youtube.com/embed/n1IoJRoxPDY?autoplay=1" frameborder="0"
+                        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
