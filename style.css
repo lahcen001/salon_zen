@@ -211,7 +211,7 @@ p,h1,h2,h3,h4,h5,h6{
     }
 
     #gotoup{
-      display:none;
+       display:none;
         position: fixed;
         width: 70px;
         height: 70px;
@@ -227,6 +227,21 @@ p,h1,h2,h3,h4,h5,h6{
 
     }
   
+    #gotoup1{
+   
+       position: fixed;
+       width: 70px;
+       height: 70px;
+       bottom: 420px;
+       left:50px;
+       text-decoration: none;
+        text-align: center;
+        line-height: 50px;
+        color:rgb(0, 0, 0);
+        font-size:18px;
+
+
+   }
   
 
 
