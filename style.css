@@ -226,9 +226,20 @@ p,h1,h2,h3,h4,h5,h6{
       font-size:18px;
 
   }
+  .scroll{
+    width: 30%;
+  }
 
   .bg1{
     background-image: url("./img/backgound/bg1_.png");
+
+    background-repeat: no-repeat; /* Do not repeat the image */
+    
+    background-position: center bottom;
+
+  }
+  .bg2{
+    background-image: url("./img/backgound/bg2_.png");
 
     background-repeat: no-repeat; /* Do not repeat the image */
     
@@ -242,7 +253,7 @@ p,h1,h2,h3,h4,h5,h6{
      width: 70px;
      height: 70px;
      bottom: 420px;
-     left:50px;
+     left:25px;
      text-decoration: none;
       text-align: center;
       line-height: 50px;
@@ -296,7 +307,7 @@ opacity: 1;
 
 .modal {
 background-color: #fff;
-width: 600px;
+width: 100%;
 max-width: 100%;
 padding: 30px 50px;
 border-radius: 5px;
@@ -699,26 +710,25 @@ img{
 
 
 .image__overlay {
-position: absolute;
-
-top: 5%;
+  position: absolute;
+  top: 3%;
   transform: translateY(-50%);
   vertical-align: middle;
   left: 50%;
--webkit-transform: translateX(-50%);
-transform: translateX(-50%);
-width: 90%;
-height: 90%;
-border:solid 2px rgb(245, 176, 112);
-background: rgba(0, 0, 0, 0.6);
-color: white;
-font-family: sans-serif;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-opacity: 0;
-transition: 0.30s;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 91%;
+  height: 94%;
+  border: solid 2px #c6a47c;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.30s;
 } 
 
 .image__overlay:hover {
@@ -770,7 +780,7 @@ font-family: Luxia2;
 
 .image__description {
 margin-top: 0.25em;
-font-size: 2em;
+font-size: 2.5em;
 font-family: Luxia1;
 color:white;
 }
@@ -823,9 +833,14 @@ border :1px sold red;
 .modal-content {
   background-color: #fefefe;
   margin: auto;
-  padding: 20px;
+  padding: 13px;
   border: 1px solid #888;
-  width: 80%;
+  width: 100%;
+  height: 17rem;
+}
+
+.mb5 {
+  margin-bottom: 8rem !important;
 }
 
 /* The Close Button */
@@ -841,4 +856,9 @@ border :1px sold red;
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+.background2{
+  margin-bottom: 10px;
+  margin-right: auto;
+  margin-left: auto;
 }

@@ -9,18 +9,10 @@
     <link rel="stylesheet" href="modal.css" />
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/magnific-popup.min.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/jquery.magnific-popup.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('#headerVideoLink').magnificPopup({
-                type: 'inline',
-                midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
-            });
-        });
 
-    </script>
     <script src="https://use.fontawesome.com/7659e695e8.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salon Zen</title>
@@ -79,7 +71,7 @@
 
 
 <body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
     <div class="hidden modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -138,19 +130,13 @@
                 </li>
 
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="myBtn" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        FR
-                    </a>
-
-
-                    <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="./en/index.html">EN</a>
-                        <a class="dropdown-item" href="#">AR</a>
-
-                    </div> -->
+                <li class="nav-item">
+                    <a class="nav-link Luxia_2" id="myBtn" href="#"> <i class="fa fa-globe" aria-hidden="true"></i>
+                        FR</a>
                 </li>
+
+
+
 
             </ul>
 
@@ -525,7 +511,7 @@
 
 
 
-    <div class="  text-right text-light  p-3 border1"
+    <div class="  text-right text-light  p-3 border1 bg2 "
         style=" background-image: url('./img/backgound/yassin_background.png');">
         <div class="col-md-12 d-flex justify-content-center  my-5">
 
@@ -568,7 +554,7 @@
     <!-- yassin lg -->
 
 
-    <div class="my-4">
+    <div class="my-4 ">
 
 
 
@@ -576,17 +562,6 @@
 
 
     </div>
-
-
-    <div class="container">
-
-
-    </div>
-
-
-    </div>
-    </div>
-
 
 
 
@@ -620,6 +595,7 @@
                         <p class="card-text"><span class="text_bold">Adresse :</span> 49, Rue Oued Tansift, Appt 2,
                             Agdal, Rabat</p>
                         <p class="card-text"> <span class="text_bold">Téléphone :</span> +212 5 3768 2202</p>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur..</p>
                     </div>
                 </div>
             </div>
@@ -638,9 +614,7 @@
                             Rabat Hay Riad,</p>
                         <p class="card-text"><span class="text_bold">Téléphone :</span>+212 5 3768 6271</p>
 
-                        <div class="text-card">
-                            Lorem ipsum dolor sit
-                        </div>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur..</p>
 
                     </div>
                 </div>
@@ -659,6 +633,7 @@
                             1,
                             Rabat Hay Riad</p>
                         <p class="card-text"><span class="text_bold">Téléphone :</span>+212 5 3757 5602</p>
+                        <p class="card-text">Lorem ipsum dolor sit amet consectetur..</p>
 
                     </div>
                 </div>
@@ -679,7 +654,7 @@
             </div>
         </div>
         <div class="row ">
-            <div class="col-md-8 d-flex justify-content-center mx-auto mb-3">
+            <div class="col-md-8 d-flex justify-content-center mx-auto mb5">
 
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Email" aria-label="Email"
@@ -701,7 +676,7 @@
 
 
 
-    <footer class="bg-primary text-center text-lg-start">
+    <footer class="bg-primary text-center text-lg-start" id="down">
         <!-- Grid container -->
         <div class="container p-4">
             <!--Grid row-->
@@ -792,27 +767,25 @@
 
 
 
-        <i class="fa fa-chevron-up" id="gotoup">
-            <div class="vl"></div>
+        <i id="gotoup">
+            <img class="scroll" src="./img/backgound/scroll.png" alt="">
         </i>
 
     </a>
 
-    <!-- <a href="#">
+    <a href="#down">
 
 
-        <div class="vl"> <i class="fa fa-chevron-up" id="gotoup1">  </i></div>
 
-
+        <i id="gotoup1">
+            <img class="scroll" src="./img/backgound/down.png" alt="">
         </i>
 
-    </a> -->
+    </a>
 
 
 
     <script type="text/javascript" src="script.js"></script>
-
-
 
 
 
@@ -824,8 +797,8 @@
 
                 <div id="headerPopup" class="mfp-hide embed-responsive embed-responsive-21by9">
                     <iframe class="embed-responsive-item" width="854" height="480"
-                        src="https://www.youtube.com/embed/n1IoJRoxPDY?autoplay=1" frameborder="0"
-                        allow="encrypted-media" allowfullscreen></iframe>
+                        src="https://www.youtube.com/embed/n1IoJRoxPDY?autoplay=0" frameborder="0"
+                        allow="encrypted-media" allowfullscreen="allowfullscreen"></iframe>
                 </div>
             </div>
         </div>
@@ -876,6 +849,15 @@
                 modal.style.display = "none";
             }
         }
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#headerVideoLink').magnificPopup({
+                type: 'inline',
+                midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+            });
+        });
+
     </script>
 
 

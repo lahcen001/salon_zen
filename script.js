@@ -4,23 +4,42 @@ $(document).ready(function () {
         midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
     });
 });
+var data = false
 
 var mybutton = document.getElementById("gotoup");
-
+var mybutton1 = document.getElementById("gotoup1");
 
 window.onscroll = function () { scrollFunction() };
 function scrollFunction() {
-    if (document.body.scrollTop > 15 || document.documentElement.scrollTop > 15) {
+    if (document.body.scrollTop > 4000 || document.documentElement.scrollTop > 4900) {
         mybutton.style.display = "block";
+
     } else {
         mybutton.style.display = "none";
+
     }
+
+
+    if (document.documentElement.scrollTop > 400 && document.documentElement.scrollTop < 650) {
+
+        data = true
+
+    } else {
+
+        mybutton1.style.display = "none";
+    }
+
+
+
+
+
 }
+
 
 $({ Counter: 0 }).animate({
     Counter: $('.Single').text()
 }, {
-    duration: 3000,
+    duration: 5000,
     easing: 'swing',
     step: function () {
         $('.Single').text(Math.ceil(this.Counter));
@@ -37,7 +56,6 @@ $({ Counter: 0 }).animate({
     }
 });
 
-
 $({ Counter: 0 }).animate({
     Counter: $('.Single2').text()
 }, {
@@ -46,4 +64,8 @@ $({ Counter: 0 }).animate({
     step: function () {
         $('.Single2').text(Math.ceil(this.Counter));
     }
-});
+})
+
+gi
+
+
