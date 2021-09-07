@@ -42,7 +42,7 @@ function scrollFunction() {
 $({ Counter: 0 }).animate({
     Counter: $('.Single').text()
 }, {
-    duration: 5000,
+    duration: 8000,
     easing: 'swing',
     step: function () {
         $('.Single').text(Math.ceil(this.Counter));
@@ -52,7 +52,7 @@ $({ Counter: 0 }).animate({
 $({ Counter: 0 }).animate({
     Counter: $('.Single1').text()
 }, {
-    duration: 3000,
+    duration: 8000,
     easing: 'swing',
     step: function () {
         $('.Single1').text(Math.ceil(this.Counter));
@@ -62,7 +62,7 @@ $({ Counter: 0 }).animate({
 $({ Counter: 0 }).animate({
     Counter: $('.Single2').text()
 }, {
-    duration: 3000,
+    duration: 8000,
     easing: 'swing',
     step: function () {
         $('.Single2').text(Math.ceil(this.Counter));
