@@ -4,7 +4,6 @@ $(document).ready(function () {
         midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
     });
 });
-var data = false
 
 var mybutton = document.getElementById("gotoup");
 var mybutton1 = document.getElementById("gotoup1");
@@ -22,7 +21,7 @@ function scrollFunction() {
 
     if (document.documentElement.scrollTop > 400 && document.documentElement.scrollTop < 650) {
 
-        data = true
+        mybutton1.style.display = "block";
 
     } else {
 
@@ -31,41 +30,41 @@ function scrollFunction() {
 
 
 
+    $({ Counter: 0 }).animate({
+        Counter: $('.Single').text()
+    }, {
+        duration: 5000,
+        easing: 'swing',
+        step: function () {
+            $('.Single').text(Math.ceil(this.Counter));
+        }
+    });
+
+    $({ Counter: 0 }).animate({
+        Counter: $('.Single1').text()
+    }, {
+        duration: 3000,
+        easing: 'swing',
+        step: function () {
+            $('.Single1').text(Math.ceil(this.Counter));
+        }
+    });
+
+    $({ Counter: 0 }).animate({
+        Counter: $('.Single2').text()
+    }, {
+        duration: 3000,
+        easing: 'swing',
+        step: function () {
+            $('.Single2').text(Math.ceil(this.Counter));
+        }
+    })
+
 
 
 }
 
 
-$({ Counter: 0 }).animate({
-    Counter: $('.Single').text()
-}, {
-    duration: 5000,
-    easing: 'swing',
-    step: function () {
-        $('.Single').text(Math.ceil(this.Counter));
-    }
-});
 
-$({ Counter: 0 }).animate({
-    Counter: $('.Single1').text()
-}, {
-    duration: 3000,
-    easing: 'swing',
-    step: function () {
-        $('.Single1').text(Math.ceil(this.Counter));
-    }
-});
-
-$({ Counter: 0 }).animate({
-    Counter: $('.Single2').text()
-}, {
-    duration: 3000,
-    easing: 'swing',
-    step: function () {
-        $('.Single2').text(Math.ceil(this.Counter));
-    }
-})
-
-gi
 
 
