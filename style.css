@@ -243,12 +243,15 @@ p,h1,h2,h3,h4,h5,h6{
     background-position: center bottom;
 
   }
+  .lire{
+    margin-right: 37px;
+  }
   .bg2{
     background-image: url("./img/backgound/bg2_.png");
 
     background-repeat: no-repeat; /* Do not repeat the image */
     
-    background-position: center bottom;
+    background-position: center top;
 
   }
 
@@ -394,6 +397,7 @@ justify-self: center;
 }
 
 
+
 @media only screen and (max-width: 600px) {
   .column {
     display: grid;
@@ -473,7 +477,9 @@ justify-self: center;
 
   
 }
-
+.pt5 {
+  padding-top: 9rem !important;
+}
 
 
 
@@ -694,17 +700,26 @@ img{
 }
 
 .soyez_unique{
+  text-align: right;
   font-family: Luxia1;
   font-size: 2rem;
-  padding-left: 5rem;
+  /* padding-left: 8rem; */
 
 }
+
+.our_story_2{
+  position: relative;
+}
 .our_story{
-
+  position: absolute;
+  left: 0%;
+  text-align: right;
+  width: 100%;
+  top: 28%;
   font-family: Luxia1;
-  font-size: 3.8rem;
-  padding-left: 5rem;
-
+  font-size: 4.8rem;
+  padding-left: 0rem;
+  color: #41444691 !important;
 
 }
 
@@ -867,3 +882,8 @@ border :1px sold red;
   margin-right: auto;
   margin-left: auto;
 }
+
+.text-bold{
+  font-weight: 900;
+}
+
