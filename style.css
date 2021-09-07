@@ -857,6 +857,10 @@ border :1px sold red;
   border: 1px solid #888;
   width: 100%;
   height: 17rem;
+ 
+}
+.modal-content-2{
+  text-align:right
 }
 
 .mb5 {

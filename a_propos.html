@@ -59,55 +59,45 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link active Luxia_1" href="https://webvok.net/demo/salonzen/">Acceil
+                    <a class="nav-link active Luxia_2" href="https://webvok.net/demo/salonzen/">Acceil
                         <span class="visually-hidden">(current)</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link Luxia_1" href="#">Services</a>
+                    <a class="nav-link Luxia_2" href="#">Services</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link Luxia_1" href="offre.html">Offres</a>
+                    <a class="nav-link Luxia_2" href="offre.html">Offres</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link Luxia_1" href="gallerie.html">Galerie</a>
+                    <a class="nav-link Luxia_2 " href="gallerie.html">Galerie</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link Luxia_1" href="#">Equipe</a>
+                    <a class="nav-link Luxia_2" href="#">Equipe</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link Luxia_1" href="a_propos.html">A propos</a>
+                    <a class="nav-link Luxia_2" href="a_propos.html">A propos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link Luxia_1" href="#">Contact</a>
+                    <a class="nav-link Luxia_2" href="#">Contact</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        FR
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">EN</a>
-                        <a class="dropdown-item" href="#">AR</a>
 
-                    </div>
+
+                <li class="nav-item">
+                    <a class="nav-link Luxia_2" id="myBtn" href="#"> <i class="fa fa-globe" aria-hidden="true"></i>
+                        FR</a>
                 </li>
+
+
+
 
             </ul>
 
-            <!-- <form class="d-flex globe">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                <span class="fr Luxia_1">FR </span> <i class="fa fa-globe " aria-hidden="true"></i>
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-        </form> -->
+
 
         </div>
     </nav>
+
 
 
 
@@ -221,7 +211,7 @@
 
 
 
-    <footer class="bg-primary text-center text-lg-start">
+    <footer class="bg-primary text-center text-lg-start" id="down">
         <!-- Grid container -->
         <div class="container p-4">
             <!--Grid row-->
@@ -298,9 +288,12 @@
         <!-- Grid container -->
 
         <!-- Copyright -->
-        <div class="text-right text-light  p-3 border1" style="background-color: rgb(0, 0, 0);">
-            Copyright © 2021
-            <a class="text-light" href="https://slonzen.ma/">Salon Zen</a>
+        <div class="text-right text-light bg-primary  p-3 border1">
+            <div class="container ">
+                <div class="copyrihgt">Copyright © 2021
+                    <a class="text-light" href="https://slonzen.ma/">Salon Zen</a></div>
+
+            </div>
         </div>
         <!-- Copyright -->
     </footer>
@@ -323,6 +316,48 @@
         </i>
 
     </a> -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-content-2">
+                <span id="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <button type="button" class="btn btn-primary m-2">Français</button>
+
+                <button type="button" class="btn btn-white m-2">English</button>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementById("close");
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 
 </body>
 
