@@ -17,6 +17,7 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salon Zen</title>
 </head>
@@ -155,10 +156,84 @@
     <div class="  text-right text-light  p-3 border1 bg2 "
         style=" background-image: url('./img/backgound/yassin_background.png');">
         <div class="col-md-12 d-flex justify-content-center  my-5">
+            <!-- 
+            <img src="./img/card3/yassin.png" class="card3" alt=""> -->
 
-            <img src="./img/card3/yassin.png" class="card3" alt="">
 
 
+
+            <div class="demo-wrap">
+                <div id="demo" class="demo">
+                    <ul class="slide-wrap" id="example">
+                        <li class="pos1">
+                            <div class="inner">
+                                <a href="#">
+                                    <img src="./img/card3/yassin.png" />
+
+                                </a>
+                            </div>
+                        </li>
+                        <li class="pos2">
+                            <div class="inner">
+                                <a href="#">
+                                    <img src="./img/card3/yassin.png" />
+
+                                </a>
+                            </div>
+                        </li>
+                        <li class="pos3">
+                            <div class="inner">
+                                <a href="#">
+                                    <img src="./img/card3/yassin.png" />
+
+                                </a>
+                            </div>
+                        </li>
+                        <li class="pos4">
+                            <div class="inner">
+                                <a href="#">
+                                    <img src="./img/card3/yassin.png" />
+
+                                </a>
+                            </div>
+                        </li>
+                        <li class="pos5">
+                            <div class="inner">
+                                <a href="#">
+                                    <img src="./img/card3/yassin.png" />
+
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="inner">
+                                <a href="#">
+                                    <img data-src="./img/card3/yassin.png" />
+
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="inner">
+                                <a href="#">
+                                    <img data-src="./img/card3/yassin.png" />
+
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="inner">
+                                <a href="#">
+                                    <img data-src="./img/card3/yassin.png" />
+
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                    <i class="arrow prev" id="jprev">&lt;</i>
+                    <i class="arrow next" id="jnext">&gt;</i>
+                </div>
+            </div>
         </div>
 
 
@@ -203,13 +278,41 @@
     </div>
 
 
+    <!-- /////////////////////////////////// -->
+
+
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="script/jquery.rollingslider.js"></script>
+    <script>
+        $('#demo').RollingSlider({
+            showArea: "#example",
+            prev: "#jprev",
+            next: "#jnext",
+            moveSpeed: 300,
+            autoPlay: false
+        });
+    </script>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36251023-1']);
+        _gaq.push(['_setDomainName', 'jqueryscript.net']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
 
 
 
 
 
 
-
+    <!-- ////////////////////////////////////////// -->
 
     <footer class="bg-primary text-center text-lg-start" id="down">
         <!-- Grid container -->
@@ -307,7 +410,7 @@
 
     </a>
 
-    <!-- <a href="#down">
+    <a href="#down">
 
 
 
@@ -315,7 +418,8 @@
             <img class="scroll" src="./img/backgound/down.png" alt="">
         </i>
 
-    </a> -->
+    </a>
+    
     <div id="myModal" class="modal">
 
         <!-- Modal content -->
@@ -358,6 +462,12 @@
             }
         }
     </script>
+
+
+
+    <!-- /////////////////////////////// -->
+
+
 
 </body>
 
