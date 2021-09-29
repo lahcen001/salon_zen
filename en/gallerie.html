@@ -3,50 +3,96 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="lux.css">
     <link rel="stylesheet" href="style.css">
-    <script src="https://use.fontawesome.com/7659e695e8.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="modal.css" />
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/magnific-popup.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/jquery.magnific-popup.min.js"></script>
+
+    <script src="https://use.fontawesome.com/7659e695e8.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salon Zen</title>
+
+    <style>
+        .card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            position: absolute;
+            content: '';
+            width: 80%;
+            background: rgba(235, 53, 131, 0.7);
+            top: -50%;
+            left: -100%;
+            z-index: 1;
+            transform: rotate(25deg);
+            transform-origin: center top 0;
+            transition: .5s
+        }
+
+        .card:hover:before {
+            left: 10%;
+
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .text-card {
+            width: 100%;
+            padding: 0 20px;
+            position: absolute;
+            top: -100%;
+            color: rgb(255, 255, 255);
+            left: 0;
+            z-index: 2;
+            transition: 1.1s;
+        }
+
+        .card-text h3 {
+            font-family: poppins;
+
+        }
+
+        .card:hover .card-text {
+            top: 80px
+        }
+    </style>
 </head>
 
 
 
 <body>
-    <script>
 
-        Number.prototype.format = function (n) {
-            var r = new RegExp('\\d(?=(\\d{3})+' + (n > 0 ? '\\.' : '$') + ')', 'g');
-            return this.toFixed(Math.max(0, Math.floor(n))).replace(r, '$&,');
-        };
-
-        $('.count').each(function () {
-            $(this).prop('counter', 0).animate({
-                counter: $(this).text()
-            }, {
-                duration: 10000,
-                easing: 'easeOutExpo',
-                step: function (step) {
-                    $(this).text('' + step.format());
-                }
-            });
-        });
-
-    </script>
-
-
-
+    <div class="hidden modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <button type="button" class="btn btn-primary">EN</button>
+                    <button type="button" class="btn btn-primary">EN</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
         <a class="navbar-brand " href="https://webvok.net/demo/salonzen/">
@@ -60,84 +106,174 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link active Luxia_1" href="https://webvok.net/demo/salonzen/">Acceil
-                        <span class="visually-hidden">(current)</span>
+                    <a class="nav-link active Luxia_2" href="https://webvok.net/demo/salonzen/en/">Home
+                        <span class="visually-hidden"> (current) </span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link Luxia_1" href="#">Services</a>
+                    <a class="nav-link Luxia_2" href="#"> Services </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link Luxia_1" href="offre.html">Offres</a>
+                    <a class="nav-link Luxia_2" href="offre.html"> Offers </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link Luxia_1" href="gallerie.html">Galerie</a>
+                    <a class="nav-link Luxia_2 " href="gallerie.html"> Gallery </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link Luxia_1" href="#">Equipe</a>
+                    <a class="nav-link Luxia_2" href="#"> Team </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link Luxia_1" href="a_propos.html">A propos</a>
+                    <a class="nav-link Luxia_2" href="a_propos.html"> About </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link Luxia_1" href="#">Contact</a>
+                    <a class="nav-link Luxia_2" href="#"> Contact </a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        EN
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="./../index.html">FR</a>
-                        <a class="dropdown-item" href="#">AR</a>
 
-                    </div>
+
+                <li class="nav-item">
+                    <a class="nav-link Luxia_2" id="myBtn" href="#"> <i class="fa fa-globe" aria-hidden="true"></i>
+                        EN</a>
                 </li>
+
+
+
 
             </ul>
 
-            <!-- <form class="d-flex globe">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                <span class="fr Luxia_1">FR </span> <i class="fa fa-globe " aria-hidden="true"></i>
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-        </form> -->
+
 
         </div>
     </nav>
-
-
-
 
     <div class="container">
         <div class="row">
             <div class="col-md-4 d-flex justify-content-center mx-auto my-5">
 
-                <h5 class="text-center title_gallerie">L'art de Salon Zen</h5>
+                <h5 class="text-center title_gallerie"> The art of Salon Zen </h5>
             </div>
 
         </div>
 
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="column">
-                <img class="img1  item1" src="./img/gallerie/1.png">
-                <img class="img1 item2" src="./img/gallerie/2.png">
-                <img class="img1 item4" src="./img/gallerie/4.png">
-                <img class="img1 item3" src="./img/gallerie/3.png">
-                <img class="img1 item5" src="./img/gallerie/5.png">
-                <img class="img1 item6" src="./img/gallerie/6.png">
-                <img class="img1  item1" src="./img/gallerie/1.png">
-                <img class="img1 item2" src="./img/gallerie/2.png">
-                <img class="img1 item4" src="./img/gallerie/4.png">
-                <img class="img1 item3" src="./img/gallerie/3.png">
-                <img class="img1 item5" src="./img/gallerie/5.png">
-                <img class="img1 item6" src="./img/gallerie/6.png">
+
+
+    <div class="container ">
+        <div class="row ">
+            <div class="column mb-0">
+                <div class="item1">
+                    <img class="img1  image__img" src="./img/gallerie/1.png">
+
+                    <div class="image__overlay">
+                        <div class="image__title"> Be Unique </div>
+                        <h1 class="image__description"> SHADOW </h1>
+                        <p class="image__description_2"> COLORATION </p>
+                    </div>
+
+                </div>
+
+                <div class="item2">
+                    <img class="img1  image__img" src="./img/gallerie/2.png">
+
+                    <div class="image__overlay">
+                        <div class="image__title"> Be Unique </div>
+                        <h1 class="image__description"> SHADOW </h1>
+                        <p class="image__description_2"> COLORATION </p>
+                    </div>
+                </div>
+                <div class="item4">
+                    <img class="img1  img1_item4" src="./img/gallerie/4.png">
+                    <div class="image__overlay">
+                        <div class="image__title"> Be Unique </div>
+                        <h1 class="image__description"> SHADOW </h1>
+                        <p class="image__description_2"> COLORATION </p>
+                    </div>
+                </div>
+                <div class="item3">
+                    <img class="img1  img1_item3" src="./img/gallerie/3.png">
+                    <div class="image__overlay">
+                        <div class="image__title"> Be Unique </div>
+                        <h1 class="image__description"> SHADOW </h1>
+                        <p class="image__description_2"> COLORATION </p>
+                    </div>
+                </div>
+                <div class="item5">
+                    <img class="img1  img1_item5" src="./img/gallerie/5.png">
+                    <div class="image__overlay">
+                        <div class="image__title"> Be Unique </div>
+                        <h1 class="image__description"> SHADOW </h1>
+                        <p class="image__description_2"> COLORATION </p>
+                    </div>
+                </div>
+                <div class="item6">
+                    <img class="img1   img1_item6" src="./img/gallerie/6.png">
+                    <div class="image__overlay">
+                        <div class="image__title"> Be Unique </div>
+                        <h1 class="image__description"> SHADOW </h1>
+                        <p class="image__description_2"> COLORATION </p>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="container ">
+        <div class="row ">
+            <div class="column mb-0">
+                <div class="item1">
+                    <img class="img1  image__img" src="./img/gallerie/1.png">
+
+                    <div class="image__overlay">
+                        <div class="image__title"> Be Unique </div>
+                        <h1 class="image__description"> SHADOW </h1>
+                        <p class="image__description_2"> COLORATION </p>
+                    </div>
+
+                </div>
+
+                <div class="item2">
+                    <img class="img1  image__img" src="./img/gallerie/2.png">
+
+                    <div class="image__overlay">
+                        <div class="image__title"> Be Unique </div>
+                        <h1 class="image__description"> SHADOW </h1>
+                        <p class="image__description_2"> COLORATION </p>
+                    </div>
+                </div>
+                <div class="item4">
+                    <img class="img1  img1_item4" src="./img/gallerie/4.png">
+                    <div class="image__overlay">
+                        <div class="image__title"> Be Unique </div>
+                        <h1 class="image__description"> SHADOW </h1>
+                        <p class="image__description_2"> COLORATION </p>
+                    </div>
+                </div>
+                <div class="item3">
+                    <img class="img1  img1_item3" src="./img/gallerie/3.png">
+                    <div class="image__overlay">
+                        <div class="image__title"> Be Unique </div>
+                        <h1 class="image__description"> SHADOW </h1>
+                        <p class="image__description_2"> COLORATION </p>
+                    </div>
+                </div>
+                <div class="item5">
+                    <img class="img1  img1_item5" src="./img/gallerie/5.png">
+                    <div class="image__overlay">
+                        <div class="image__title"> Be Unique </div>
+                        <h1 class="image__description"> SHADOW </h1>
+                        <p class="image__description_2"> COLORATION </p>
+                    </div>
+                </div>
+                <div class="item6">
+                    <img class="img1   img1_item6" src="./img/gallerie/6.png">
+                    <div class="image__overlay">
+                        <div class="image__title"> Be Unique </div>
+                        <h1 class="image__description"> SHADOW </h1>
+                        <p class="image__description_2"> COLORATION </p>
+                    </div>
+                </div>
 
             </div>
 
@@ -147,59 +283,38 @@
 
 
 
-
-    </div>
-
-
-    </div>
-    </div>
-
-
-
-
-
-
-
-    <div class="container bg1">
-
+    <div class="container bg1 mt-5">
 
         <div class="row">
             <div class="col-md-4 d-flex justify-content-center mx-auto">
-
-                <h5 class="text-center title1">DON’T MISS OUT</h5>
+                <h5 class="text-center title1"> DON'T MISS ANY PROMOTION! </h5>
             </div>
 
         </div>
         <div class="row">
             <div class="col-md-8 d-flex justify-content-center mx-auto mb-3">
 
-                <h5 class="text-center title2">Let your hair shine with special offers and </br>deals ! Subscribe !</h5>
+                <h5 class="text-center title2"> Subscribe And Enjoy The Best
+
+                    </br> Beauty Deals.
+                </h5>
             </div>
         </div>
         <div class="row ">
-            <div class="col-md-8 d-flex justify-content-center mx-auto mb-3">
+            <div class="col-md-8 d-flex justify-content-center mx-auto mb5">
 
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Email" aria-label="Email"
+                    <input type="text" class="form-control" placeholder="Saisissez votre email" aria-label="Email"
                         aria-describedby="basic-addon2">
                     <div class="input-group-append">
-                        <button class="btn btn-primary" type="button">SIGN UP</button>
+                        <button class="btn btn-primary" type="button"> SIGN UP </button>
                     </div>
                 </div>
             </div>
         </div>
-
-
     </div>
 
-
-
-
-
-
-
-
-    <footer class="bg-primary text-center text-lg-start">
+    <footer class="bg-primary text-center text-lg-start" id="down">
         <!-- Grid container -->
         <div class="container p-4">
             <!--Grid row-->
@@ -212,8 +327,8 @@
                     <hr class="hr_footer">
                     <p class="text-light">
 
-                        Retrouvez-nous sur les réseaux sociaux et abonnez-vous à pour suivre en temps réel toute
-                        l'actualité de Salon Zen
+                        Find us on social networks and subscribe to to follow in real time any
+                        News ENom Salon Zen
                         Copyright © 2021 SalonZen
                     </p>
                     <div class="social-media">
@@ -262,7 +377,7 @@
 
                 <!--Grid column-->
                 <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-light mt-4"> Telecharger l'application</h5>
+                    <h5 class="text-light mt-4"> Download the application </h5>
                     <hr class="hr_footer">
 
                     <img src="./img/appStore.png" class="appStore" alt="">
@@ -276,15 +391,93 @@
         <!-- Grid container -->
 
         <!-- Copyright -->
-        <div class="text-right text-light  p-3 border1" style="background-color: rgb(0, 0, 0);">
-            Copyright © 2021
-            <a class="text-light" href="https://slonzen.ma/">Salon Zen</a>
+        <div class="text-right text-light bg-primary  p-3 border1">
+            <div class="container ">
+                <div class="copyrihgt">Copyright © 2021
+                    <a class="text-light" href="https://slonzen.ma/">Salon Zen</a></div>
+
+            </div>
         </div>
         <!-- Copyright -->
     </footer>
-    <a href="#">
-        <i class="fa fa-arrow-up gotoup"></i>
-    </a>
+
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+
+                <div id="headerPopup" class="mfp-hide embed-responsive embed-responsive-21by9">
+                    <iEName class="embed-responsive-item" width="854" height="480"
+                        src="https://www.youtube.com/embed/n1IoJRoxPDY?autoplay=0" ENameborder="0"
+                        allow="encrypted-media" allowfullscreen="allowfullscreen"></iEName>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Trigger/Open The Modal -->
+
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-content-2">
+                <span id="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <a type="button" href="./../gallerie.html" class="btn btn-white m-2 "> English</a>
+
+                <a type="button" href="gallerie.html" class=" btn btn-primary m-2">ENançais</a>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementById("close");
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#headerVideoLink').magnificPopup({
+                type: 'inline',
+                midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+            });
+        });
+
+    </script>
+
+    <script type="text/javascript" src="script.js"></script>
+    <!-- basic modal -->
+
 </body>
 
 </html>
